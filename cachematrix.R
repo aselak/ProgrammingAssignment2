@@ -1,8 +1,10 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
-
+# makeCacheMatrix will create a special function variable containing Matrix and
+# user-functions for that can be performed on Matrix.  The setinverse function
+# will attempt to create a inverse matrix by calling solve() function.
+# It requires a "square" matrix as an input
 makeCacheMatrix <- function(x = matrix()) {
             m <- NULL
             set <- function(y) {
@@ -19,7 +21,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+# cacheSolve will check for an cached version of the passed matrix.  If it exists,
+# it will get cached version, otherwise it will invoke the calculation of inversematrix.
+
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
